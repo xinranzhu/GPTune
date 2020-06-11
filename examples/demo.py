@@ -207,7 +207,7 @@ if __name__ == '__main__':
         
             annot_min(x,y)
             # plt.show()
-            plt.show(block=False)
+            # plt.show(block=False)
             fig.savefig('obj_t_%d.eps'%t)       
         
     

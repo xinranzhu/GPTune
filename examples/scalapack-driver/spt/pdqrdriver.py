@@ -36,7 +36,6 @@ def clean():
 ################################################################################
 
 def write_input(params, RUNDIR, niter=1):
-
     fin = open("%s/QR.in"%(RUNDIR), 'w')
     fin.write("%d\n"%(len(params) * niter))
     for param in params:
@@ -44,36 +43,23 @@ def write_input(params, RUNDIR, niter=1):
             # READ( NIN, FMT = 2222 ) FACTOR, MVAL, NVAL, MBVAL, NBVAL, PVAL, QVAL, THRESH
             fin.write("%2s%6d%6d%6d%6d%6d%6d%20.13E\n"%(param[0], param[1], param[2], param[5], param[6], param[9], param[10],param[11]))
     fin.close()
-
+    
 def execute(nproc, nthreads, RUNDIR):
-
     #XXX To be removed
     def v_sequential():
         return os.system("cd %s; export OMP_PLACES=threads; export OMP_PROC_BIND=spread; export OMP_NUM_THREADS=1; %s/pdqrdriver 2> err;"%(RUNDIR, BINDIR))
-
     def v_parallel():
         # os.system("cd %s;"%(RUNDIR)) 
         # print('nimdda',RUNDIR)
         
         info = MPI.Info.Create()
         info.Set('env', 'OMP_NUM_THREADS=%d\n' %(nthreads))
-        
-        
-        
         # info.Set("add-hostfile", "myhostfile.txt")
         # info.Set("host", "myhostfile.txt")
-         
-
-       
-        
-        
         print('exec', "%s/pdqrdriver"%(BINDIR), 'args', "%s/"%(RUNDIR), 'nproc', nproc)#, info=mpi_info).Merge()# process_rank = comm.Get_rank()
         comm = MPI.COMM_SELF.Spawn("%s/pdqrdriver"%(BINDIR), args="%s/"%(RUNDIR), maxprocs=nproc,info=info)
         comm.Disconnect()
-        
         return 0
-
-
         # return os.system("cd %s; export OMP_PLACES=threads; export OMP_PROC_BIND=spread; export OMP_NUM_THREADS=%d; mpirun -c %d -n %d %s/pdqrdriver 2>> QR.err &  wait;"%(RUNDIR, nthreads, 2*nthreads, nproc, BINDIR))
 
 ##    err = v_sequential()
