@@ -61,7 +61,7 @@ def HypreAMG (nx, ny, nz, Px, Py, Pz, strong_threshold, trunc_factor, P_max_elmt
     SmooLev = "-smlv %d " % smooth_num_levels 
     InterType = "-interptype %d " % interp_type 
     AggLev = "-agg_nl %d " % agg_num_levels
-
+    
     CoarsTypes = {0:"-cljp ", 1:"-ruge ", 2:"-ruge2b ", 3:"-ruge2b ", 4:"-ruge3c ", 6:"-falgout ", 8:"-pmis ", 10:"-hmis "}
     CoarsType = CoarsTypes[coarsen_type]
 

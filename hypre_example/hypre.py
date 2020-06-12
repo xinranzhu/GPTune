@@ -149,7 +149,7 @@ def main(): # todo
     os.environ['TUNER_NAME'] = 'GPTune'
     # os.system("mkdir -p scalapack-driver/bin/%s; cp ../build/pdqrdriver scalapack-driver/bin/%s/.;" %(machine, machine))
 
-    nprocmax = nodes*cores-1  # YL: there is one proc doing spawning
+    nprocmax = nodes*cores-1 
     nprocmin = nodes
     
     nxmin = 20
@@ -175,10 +175,16 @@ def main(): # todo
     IS = Space([nx, ny, nz])
     PS = Space([Px, Py, Pz, strong_threshold, trunc_factor, P_max_elmts, coarsen_type, relax_type, smooth_type, smooth_num_levels, interp_type, agg_num_levels])
     OS = Space([r])
-    # Question: how to set 
+    
+    # Question: how to set constraints
     cst1 = f"Px * Py * Pz <= {nprocmax}"
     cst2 = f"Px * Py * Pz >= {nprocmin}"
     constraints = {"cst1": cst1, "cst2": cst2}
+    
+    # cst1 = f"1 <= Px <= {nprocmax}"
+    # cst2 = f"1 <= Py <= {nprocmax}"
+    # cst3 = f"1 <= Pz <= {nprocmax}"
+    # constraints = {"cst1": cst1, "cst2": cst2, "cst3": cst3}
     print(IS, PS, OS, constraints)
 
     problem = TuningProblem(IS, PS, OS, objectives, constraints, None) # no performance model

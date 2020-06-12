@@ -1,0 +1,76 @@
+/global/u2/x/xinranz/projects/GPTune/hypre_example/exp/tmp/tmp
+/global/u2/x/xinranz/projects/GPTune/hypre_example/hypre/src/test/ij 
+Current param (60, 50, 80, '-a 0 0 0 ', '-c 1 1 1 ', '-laplacian', 3, 2, 2, 2, 0.25, 0., 4, 10, 8, 6, 0, 6, 0)
+Sequentially execute the following ......
+
+export OMP_PLACES=threads; export OMP_PROC_BIND=spread; export OMP_NUM_THREADS=1; srun --ntasks-per-node 8 /global/u2/x/xinranz/projects/GPTune/hypre_example/hypre/src/test/ij -laplacian-n 60 50 80 -c 1 1 1 -a 0 0 0 -solver 3 -P 2 2 2 -th 0.25 -tr 0.0 -Pmx 4 -rlx 8 -smtype 6 -smlv 0 -interptype 6 -agg_nl 0 -hmis > /global/u2/x/xinranz/projects/GPTune/hypre_example/exp/cori/GPTune/57799/ijoutput_60_50_80_2_2_2_0.25_0.0_4_10_8_6_0_6_0
+srun: Job 31643860 step creation temporarily disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+srun: Job 31643860 step creation still disabled, retrying (Requested nodes are busy)
+--------------------------------------------------------------------------
+ORTE has lost communication with a remote daemon.
+
+  HNP daemon   : [[57902,0],0] on node nid01256
+  Remote daemon: [[57902,0],2] on node nid01750
+
+This is usually due to either a failure of the TCP network
+connection to the node, or possibly an internal failure of
+the daemon itself. We cannot recover from this failure, and
+therefore will terminate the job.
+--------------------------------------------------------------------------
+mpirun: Forwarding signal 18 to job
